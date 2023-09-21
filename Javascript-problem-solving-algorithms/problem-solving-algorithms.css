@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  #body {
+    background: hsl(255, 90%, 70%);
+    user-select: none;
+  }
+
+  h1 {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    text-align: center;
+    border: 1px solid red;
+    width: 80rem;
+    padding: 20px;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+    color: #fff;
+    background-color: navy;
+  }
