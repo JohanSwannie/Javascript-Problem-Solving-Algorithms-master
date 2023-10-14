@@ -24,7 +24,7 @@ document.getElementById(
 // * REMOVE DUPLICATES FROM AN ARRAY - METHOD 2
 // * --------------------------------------------------
 
-const array3 = [21, 15, 5, 19, 3, 15, 20, 29, 15, 21, 4, 23];
+const array3 = [21, 3, 4, 15, 5, 19, 3, 15, 20, 29, 15, 5, 21, 4, 23];
 
 array3.sort((a, b) => a - b);
 
@@ -54,7 +54,6 @@ const object1 = {};
 for (let value of array5) {
   object1[value] = true;
 }
-
 const array6 = [...Object.keys(object1)];
 
 document.getElementById(
