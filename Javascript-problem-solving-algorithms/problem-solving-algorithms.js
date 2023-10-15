@@ -383,11 +383,15 @@ function checkIfPalindrome(string) {
   let reverseString = lowercaseString.split("").reverse().join("");
   return reverseString === lowercaseString;
 }
+const str5 = "Sir, I demand, I am a maid named Iris";
+const str6 = "Sit on a potato pan, Otis";
+const str7 = "Go hang a salami, I'm a lasagna hog";
+const str8 = "Madam in Eden, I'm Adam";
 
 const string5 = "Sir, I demand, I am a maid named Iris";
 
 result2 = `Is "<b style="color: red">${string5}</b>" a Palindrome - ${checkIfPalindrome(
-  string5
+  str5
 )}`;
 
 document.getElementById("pbs17").innerHTML = result2;
