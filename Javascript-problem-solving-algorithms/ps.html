@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clock boy</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100vw;
+        min-height: 100vh;
+      }
+
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+        margin-bottom: 2rem;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 2rem;
+        gap: 1rem;
+      }
+
+      button {
+        background-color: blue;
+        color: #fff;
+        padding: 0.75rem;
+        border-radius: 15px;
+        margin-right: 2rem;
+      }
+
+      .clockShow {
+        display: flex;
+        justify-content: center;
+        gap: 0.25rem;
+      }
+
+      p {
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        padding: 1.35rem;
+      }
+
+      p:nth-child(odd) {
+        color: #fff;
+        background-color: red;
+        border-radius: 55%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Time Clock</h1>
+    <div class="buttons">
+      <button onclick="startTimeClock()">Start Time Clock</button>
+      <button onclick="stopTimeClock()">Stop Time Clock</button>
+    </div>
+    <div class="clockShow">
+      <p id="p1"></p>
+      <p id="p2"></p>
+      <p id="p3"></p>
+      <p id="p4"></p>
+      <p id="p5"></p>
+    </div>
+  </body>
+  <script src="ps.js"></script>
+</html>
