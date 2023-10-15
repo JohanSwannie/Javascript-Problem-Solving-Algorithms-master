@@ -1,6 +1,8 @@
 function factorialMethod1(value) {
+  if (value === 0 || value === 1) {
+    return 1;
+  }
   let result = value;
-  if (value === 0 || value === 1) return 1;
   while (value > 1) {
     value--;
     result *= value;
