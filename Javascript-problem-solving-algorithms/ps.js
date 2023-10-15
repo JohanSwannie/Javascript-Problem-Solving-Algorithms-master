@@ -2,12 +2,10 @@ function factorialMethod1(value) {
   if (value === 0 || value === 1) {
     return 1;
   }
-  let result = value;
-  while (value > 1) {
-    value--;
-    result *= value;
+  for (let i = value - 1; i > 0; i--) {
+    value *= i;
   }
-  return result;
+  return value;
 }
 
-alert(factorialMethod1(4));
+alert(factorialMethod1(5));
