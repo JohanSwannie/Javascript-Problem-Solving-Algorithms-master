@@ -1,11 +1,8 @@
-function factorialMethod1(value) {
+const factorialMethod3 = (value) => {
   if (value === 0 || value === 1) {
     return 1;
   }
-  for (let i = value - 1; i > 0; i--) {
-    value *= i;
-  }
-  return value;
-}
+  return value * factorialMethod3(value - 1);
+};
 
-alert(factorialMethod1(5));
+alert(factorialMethod3(4));
