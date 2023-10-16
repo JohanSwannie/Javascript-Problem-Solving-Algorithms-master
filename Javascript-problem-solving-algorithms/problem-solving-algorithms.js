@@ -559,11 +559,11 @@ const determineIndices = (array13, target) => {
 };
 
 const array13 = [
-  19, 10, 17, 3, 22, 31, 5, 11, 7, 59, 101, 117, 13, 113, 122, 30, 15, 71, 77,
+  19, 10, 10, 3, 22, 31, 5, 11, 7, 59, 101, 117, 13, 113, 122, 30, 15, 71, 77,
   79, 16, 44, 63, 12, 87, 95, 61, 1, 119, 104, 107, 23, 28, 33, 5, 40, 70, 2,
 ];
 
-let sumTarget = 214;
+let sumTarget = 39;
 
 let indicesResult = `${determineIndices(array13, sumTarget)}`;
 
