@@ -1,13 +1,19 @@
-function largestNumbersInArrays2(arr) {
-  return arr.map((pop) => pop.filter((amt) => amt > 100));
+function largestNumbersInArrays3(array) {
+  return array.map((successiveArray2) =>
+    Math.max.apply(null, successiveArray2)
+  );
 }
 
-const array11 = [
-  [71, 167, 202, 183, 16, 12],
-  [191, 37, 7, 28, 38, 20, 18],
-  [116, 41, 26, 53, 91, 16, 43],
-  [21, 50, 111, 30, 49, 123],
-  [41, 18, 401, 114, 22, 95],
+const array12 = [
+  [4, 7, 20, 1, 9, 31, 6, 11, 8],
+  [23, 45, 33, 20, 41, 19, 25],
+  [37, 59, 65, 35, 14, 22, 88],
+  [10, 20, 60, 30, 70, 40],
+  [38, 27, 29, 47, 13, 12, 36],
 ];
 
-alert(largestNumbersInArrays2(array11));
+alert(
+  `Largest of all numbers is ${
+    largestNumbersInArrays3(array12).sort((a, b) => b - a)[0]
+  }`
+);
