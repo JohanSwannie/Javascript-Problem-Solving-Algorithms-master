@@ -1,11 +1,15 @@
-function wordToNumericValue(word) {
-  let numValue = 0;
-  for (var i = 0; i < word.length; i++) {
-    numValue += parseInt(word[i], 36) - 9;
-  }
-  return numValue;
-}
+const findTheLongestWordInString3 = (string) => {
+  let longestWord3 = string
+    .split(" ")
+    .reduce(
+      (returnWord, currentWord) =>
+        currentWord.length > returnWord.length ? currentWord : returnWord,
+      ""
+    );
+  return `The longest word is ${longestWord3} and is ${longestWord3.length} characters long`;
+};
 
-let word = "Fantastic";
+const string8 =
+  "Tommy eat healthy and consumes sufficient amounts of nutrients daily";
 
-alert(wordToNumericValue(word));
+alert(findTheLongestWordInString3(string8));
