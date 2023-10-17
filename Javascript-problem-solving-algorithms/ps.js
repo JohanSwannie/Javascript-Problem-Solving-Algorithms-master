@@ -1,17 +1,24 @@
-let array = [17, 23, 15, 29, 3, 15, 19, 3, 15, 10, 7, 14, 3, 19];
-
-let array2 = [];
-
-for (let i = 0; i < array.length; i++) {
-  if (array2.indexOf(array[i]) === -1) {
-    array2.push(array[i]);
+function removeSmallest(numbers) {
+  let newArray = [];
+  if (numbers.length === 0) {
+    return newArray;
   }
+  let smallestIndex = 0;
+  let smallestNumber = numbers[0];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] < smallestNumber) {
+      smallestNumber = numbers[i];
+      smallestIndex = i;
+    }
+  }
+  newArray = numbers
+    .slice(0, smallestIndex)
+    .concat(numbers.slice(smallestIndex + 1));
+  return newArray;
 }
 
-array2.sort((a, b) => a - b);
-
-alert(array2);
-
-let numbs = [12, 18, 17, 21, 10, 26, 35, 7, 18];
-
-alert(numbs.findIndex((num) => num === numbs[numbs.length - 6]));
+alert(
+  `New array after first smallest number is removed, is : ${removeSmallest([
+    5, 9, 9, 2, 1, 3, 8, 1, 2, 7,
+  ])}`
+);
