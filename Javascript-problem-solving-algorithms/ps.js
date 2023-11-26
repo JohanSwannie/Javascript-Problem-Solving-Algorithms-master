@@ -1,14 +1,11 @@
-const fibonacciMethod = (num) => {
-  let x = 1;
-  let y = 0;
-  let temp = 0;
-  while (num > 0) {
-    temp = x;
-    x = x + y;
-    y = temp;
-    num--;
-  }
-  return y;
-};
+let array = [12, 18, 23, 7, 10, 15, 12, 10, 27, 31, 6, 12, 18];
 
-alert(fibonacciMethod(5));
+let obj = {};
+
+for (let value of array) {
+  obj[value] = true;
+}
+
+const objects = [...Object.keys(obj)];
+
+alert(objects);
