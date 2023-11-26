@@ -1,11 +1,8 @@
-let array = [12, 18, 23, 7, 10, 15, 12, 10, 27, 31, 6, 12, 18];
+const findElement = (array, element) =>
+  array.findIndex((pop) => pop === element);
 
-let obj = {};
+let array = [19, 20, true, "Koos", 29, false, "Jannie", "Mary"];
 
-for (let value of array) {
-  obj[value] = true;
-}
-
-const objects = [...Object.keys(obj)];
-
-alert(objects);
+alert(
+  `The name "Koos" is found in the array at index ${findElement(array, "Koos")}`
+);
