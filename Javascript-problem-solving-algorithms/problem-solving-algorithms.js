@@ -30,7 +30,7 @@ array3.sort((a, b) => a - b);
 
 const array4 = [];
 
-let initialValue;
+let initialValue = "";
 
 for (let j = 0; j < array3.length; j++) {
   if (array3[j] !== initialValue) {
