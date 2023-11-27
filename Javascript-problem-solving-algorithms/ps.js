@@ -56,6 +56,7 @@ alert(`The element that occurs most times in the array is ${mostOccur(arr10)}`);
 const arr11 = [
   12, 7, 10, 29, 41, 12, 18, 14, 24, 30, 12, 41, 10, 12, 19, 22, 12,
 ];
+
 const result = arr11.reduce(
   (a, b, index, array) =>
     array.filter((o) => o === a).length >= array.filter((o) => o === b).length
