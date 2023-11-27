@@ -1,19 +1,31 @@
-const findElement = (array, element) =>
-  array.findIndex((pop) => pop === element);
+const IntegerToRoman = (passedNumber) => {
+  const romanNumbers = [
+    "M",
+    "CM",
+    "D",
+    "CD",
+    "C",
+    "XC",
+    "L",
+    "XL",
+    "X",
+    "IX",
+    "V",
+    "IV",
+    "I",
+  ];
+  const integerNumbers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+  let convertedNumber = "";
+  while (passedNumber !== 0) {
+    const indexFound = integerNumbers.findIndex(
+      (number) => passedNumber >= number
+    );
+    convertedNumber += romanNumbers[indexFound];
+    passedNumber -= integerNumbers[indexFound];
+  }
+  return convertedNumber;
+};
 
-let array = [19, 20, true, "Koos", 29, false, "Jannie", "Mary"];
-
-const container = document.querySelector(".container");
-let n = 1;
-let p = "";
-
-array.map((element) => {
-  const pippie = document.createElement("p");
-  p = `p${n}`;
-  pippie.setAttribute("id", p);
-  pippie.innerHTML = `The element [ ${element} ] is found in the array at index ${findElement(
-    array,
-    element
-  )}`;
-  container.appendChild(pippie);
-});
+alert(
+  `The number 4238 converted to a Roman Number will be ${IntegerToRoman(4238)}`
+);
