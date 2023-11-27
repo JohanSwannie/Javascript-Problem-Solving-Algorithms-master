@@ -20,8 +20,16 @@ const binarySearch = (array, number) => {
   }
 };
 
-const array = [12, 18, 7, 41, 10, 3, 33, 38, 26, 21, 18, 25];
+const countNumbers = (array, numb) => {
+  return (amount = array.reduce((a, value) => (value === numb ? a + 1 : a), 0));
+};
+
+const array = [
+  12, 18, 7, 41, 10, 3, 7, 33, 38, 26, 21, 18, 25, 31, 7, 40, 9, 7,
+];
 
 const newArray = [...new Set(array)].sort((a, b) => a - b);
 
 alert(`The number "38" was found at index ${binarySearch(newArray, 38)}`);
+
+alert(`The number "7" appears ${countNumbers(array, 7)} times in the array`);
