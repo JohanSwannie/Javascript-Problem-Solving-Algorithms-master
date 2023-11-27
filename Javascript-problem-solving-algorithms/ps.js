@@ -1,31 +1,28 @@
-const IntegerToRoman = (passedNumber) => {
-  const romanNumbers = [
-    "M",
-    "CM",
-    "D",
-    "CD",
-    "C",
-    "XC",
-    "L",
-    "XL",
-    "X",
-    "IX",
-    "V",
-    "IV",
-    "I",
-  ];
-  const integerNumbers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
-  let convertedNumber = "";
-  while (passedNumber !== 0) {
-    const indexFound = integerNumbers.findIndex(
-      (number) => passedNumber >= number
-    );
-    convertedNumber += romanNumbers[indexFound];
-    passedNumber -= integerNumbers[indexFound];
+const binarySearch = (array, number) => {
+  let start = 0;
+  let ends = array.length - 1;
+  while (start < ends) {
+    let middle = Math.floor((start + ends) / 2);
+    if (number === array[start]) {
+      return start;
+    }
+    if (number === array[middle]) {
+      return middle;
+    }
+    if (number === array[ends]) {
+      return ends;
+    }
+    if (number > array[middle]) {
+      start = middle + 1;
+    } else {
+      ends = middle - 1;
+    }
   }
-  return convertedNumber;
 };
 
-alert(
-  `The number 4238 converted to a Roman Number will be ${IntegerToRoman(4238)}`
-);
+const array = [12, 18, 7, 41, 10, 3, 33, 38, 26, 21, 18, 25];
+
+const sortedArray = array.sort((a, b) => a - b);
+alert(sortedArray);
+
+alert(`The number "41" was found at index ${binarySearch(sortedArray, 41)}`);
